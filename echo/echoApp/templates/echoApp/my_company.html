@@ -1,0 +1,166 @@
+{% extends 'echoApp/base.html' %} {% block styles%} {% load static %}
+<link rel="stylesheet" href="{% static 'css/my_company.css'%}" />
+{% endblock %} {% block container%}
+<div class="content">
+        <div class="container">
+        <form name="edit_company" action="" method="post">
+            {% csrf_token %}
+            <img src="{{ company.logo.url }}" id="preview">
+            <input
+                type="file"
+                id="profile-pic"
+                name="logo"
+                accept="image/*"
+                onchange="loadImage(event)"
+                value=""
+                />
+            <p class="title_country">
+                <label for="Title">Title: </label>
+                <input name="title" type="text" placeholder="" value="{{company.title}}"><br>
+
+                <div class="place">
+                    <label class="place-city">Country: </label>
+                    <select name="country">
+                        <option>-</option>
+                        {% for i in country %}
+                            {% if company.country == i %}
+                                <option selected>{{i}}</option>
+                            {% else %}
+                                <option>{{i}}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+            </p>
+
+            <div class="box">
+                <textarea name="description" cols="30" rows="3" placeholder="Type here" class="textarea">{{ company.description }}</textarea>
+            </div>
+            <input type="submit" class="btn1" value="Сhange Company">
+        </form>
+
+    </div>
+    {% for i in vacancies %}
+    <div class="vacancy">
+      <a href="{% url 'vacancy' i.id%}" class="dev_1" style="color: black; margin: 5px">
+          {{ i.title }}
+      </a>
+
+      <p style="font-size: 15px; margin: 5px; margin-top: 10px">
+        {{ i.country }} {{ i.region }} {{ i.district }}<br />{{ i.company }}<br />{{ i.experience}}
+      </p>
+
+      <p style="font-size: 20px; margin: 5px; margin-top: 10px">
+        {{ i.salary }} {{ i.currency }}
+      </p>
+
+      <p style="font-size: 10px; margin: 5px; margin-top: 10px">
+        {{ i.date_of_create }}
+      </p>
+
+        <a href="{% url 'delete_vacancy' i.id %}" class="delete-cv">Delete</a>
+        {% if i.is_publish == True %}
+            <a href="{% url 'change_vacancy_publish' i.id %}" class="hide">Hide</a>
+        {% else %}
+            <a href="{% url 'change_vacancy_publish' i.id %}" class="hide">Show</a>
+        {% endif %}
+    </div>
+    {% endfor %}
+            <div class="container1">
+                <form action="" method="post" name="add_vacancy">
+                    {% csrf_token %}
+                    <label for="title">Work title: </label>
+                    <input name="title" type="text" id="title" placeholder=""><br>
+                    <label for="salary">Salary: </label>
+                    <input name="salary" type="number" id="salary" placeholder=""><br>
+                    <label>Currency:</label>
+                        <select name="currency">
+                          <option value="USD">USD</option>
+                          <option value="BYN">BYN</option>
+                          <option value="RUB">RUB</option>
+                        </select>
+                    <div class="exp_lvl">
+                        <label>Experience:</label>
+                        <select id="select-experience" name="experience">
+                            <option value="-">-</option>
+                            <option value="Without experience">Without experience</option>
+                            <option value="From 1 to 3 years">From 1 to 3 years</option>
+                            <option value="More than 3 years">More than 3 years</option>
+                        </select>
+                    </div>
+
+                    <div class="employment">
+                        <label>Employment:</label>
+                        <select id="select-employment" name="employment">
+                          <option value="-">-</option>
+                          <option value="Full employment">Full employment</option>
+                          <option value="Part-time employment">Part-time employment</option>
+                          <option value="One-time job">One-time job</option>
+                          <option value="internship">Internship</option>
+                        </select>
+                      </div>
+
+                    <div class="sort">
+                        <ul>
+                          Education:
+                          <li>
+                            <input
+                              type="radio"
+                              onMouseDown="this.isChecked=this.checked;"
+                              onClick="this.checked=!this.isChecked;"
+                              name="education"
+                              value="Not required"
+                            />Not required
+                          </li>
+                          <li>
+                            <input
+                              type="radio"
+                              onMouseDown="this.isChecked=this.checked;"
+                              onClick="this.checked=!this.isChecked;"
+                              name="education"
+                              value="Higher"
+                            />Higher
+                          </li>
+                          <li>
+                            <input
+                              type="radio"
+                              onMouseDown="this.isChecked=this.checked;"
+                              onClick="this.checked=!this.isChecked;"
+                              name="education"
+                              value="Vocational"
+                            />Vocational
+                          </li>
+                          <li>
+                            <input
+                              type="radio"
+                              onMouseDown="this.isChecked=this.checked;"
+                              onClick="this.checked=!this.isChecked;"
+                              name="education"
+                              value="Specialized secondary"
+                            />Specialized secondary
+                          </li>
+                        </ul>
+                      </div>
+                        <div class="countries">
+                            <label for="selectCountry">Country: </label>
+                            <select name="country" id="selectCountry" >
+                                <option>-</option>
+                            </select>
+                        </div>
+                        <div class="region" >
+                            <label>Region: </label>
+                        </div>
+                        <div class="district" >
+                            <label>District: </label>
+                        </div>
+
+                <div class="box">
+                    <textarea name="description" cols="30" rows="3" placeholder="Type here" class="textarea"></textarea>
+                </div>
+                <input type="submit" class="btn1" value="Create vacancy">
+            </form>
+
+        </div>
+</div>
+<script src="{% static 'js/my_company.js'%}"></script>
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends 'echoApp/base.html' %} {% block styles%} {% load static %}
+<link rel="stylesheet" href="{% static 'css/profile.css'%}" />
+{% endblock %} {% block container%}
+<div class="container">
+  <h1>Personal Area</h1>
+  <form action="" method="post" id="profile-form" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="profile-pic" id="preview-label">Profile Picture:</label>
+    <div class="image-upload">
+      <img id="preview" src="{{ auth_user.img.url }}" alt="your image" />
+      <input
+        type="file"
+        id="profile-pic"
+        name="img"
+        accept="image/*"
+        onchange="loadImage(event)"
+        value="{{ auth_user.img.url }}"
+      />
+    </div>
+
+    <label for="first-name">Name:</label>
+    <input
+      type="text"
+      id="first-name"
+      name="first_name"
+      required
+      value="{{ auth_user.first_name }}"
+                  maxlength="20"
+
+    />
+    <label for="last-name">Surname:</label>
+    <input
+      type="text"
+      id="last-name"
+      name="last_name"
+      required
+      value="{{ auth_user.last_name }}"
+                  maxlength="20"
+
+    />
+    <label for="date-input"> Date of Birth:</label>
+    <input
+
+      type="text"
+      id="date-input"
+      name="birthday"
+      required
+      value="{{ auth_user.birthday }}"
+    />
+    <label for="email">Email:</label>
+    <input
+            maxlength="40"
+      type="email"
+      id="email"
+      name="email"
+      required
+      value="{{ auth_user.email }}"
+      readonly
+    />
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+      {% if auth_user.gender == 'Man'%}
+      <option value="Man" selected>Man</option>
+      <option value="Women" selected>Women</option>
+      {% else %}
+      <option value="Women">Women</option>
+      <option value="Man">Man</option>
+      {% endif %}
+    </select>
+    <label for="phone">Telephone number: </label>
+    <input maxlength="20"
+      type="tel"
+      id="phone"
+      name="phone"
+      required
+      value="{{ auth_user.phone }}"
+    />
+    <label for="select-country">Country:</label>
+    <div class="profile-country">
+      <select name="country" id="select-country">
+        <option value="none">-</option>
+      </select>
+    </div>
+    <input
+      type="submit"
+      class="save-settings"
+      value="Save settings"
+      style="font-weight: 600; color: white"
+    />
+  </form>
+  <div style="display: flex; margin-top: 10px; justify-content: space-between">
+    {% if company %}
+        <input type="submit" class="my-company" value="My company" />
+    {% else %}
+        <input type="submit" class="add-company" value="Add company" />
+    {% endif %}
+    <input type="submit" class="my-resumes" value="My resumes" />
+    <input type="submit" class="logout-btn" value="Log out" />
+  </div>
+</div>
+<script src="{% static 'js/profile.js'%}"></script>
+{% endblock %}

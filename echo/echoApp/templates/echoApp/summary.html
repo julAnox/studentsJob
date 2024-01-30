@@ -1,0 +1,24 @@
+{% extends 'echoApp/base.html' %} {% block styles%} {% load static %}
+<link rel="stylesheet" href="{% static 'css/summary.css'%}" />
+{% endblock %} {% block container%}
+<div style="display: flex; justify-content: center">
+    <div class="container">
+        <div style="display: flex; padding-bottom: 30px">
+            <img src="{{ summary.user.img.url }}" class="img">
+            <div style="margin-left: 40px">
+                <h2>{{ summary.title }}</h2>
+                <h4>{{ summary.user.first_name }} {{ summary.user.last_name }}</h4>
+                <h5>{{ summary.user.country }} {{ summary.user.region }} {{ summary.user.district }}</h5>
+                <h5>{{ summary.user.email }}</h5>
+                <h5>{{ summary.user.place_of_education }}</h5>
+            </div>
+        </div>
+            <h4>Experience: {{ summary.experience }}</h4>
+            <h4>Education: {{ summary.education }}</h4>
+            <h4>Employment: {{ summary.employment }}</h4>
+        <div class="box">
+            <p>{{ summary.description }}</p>
+        </div>
+    </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="stylesheet" href="{% static 'css/navbar.css'%}" />
+      <link rel="shortcut icon" href="{% static 'img/logo.png'%}" />
+    {% block styles%}
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/footer.css'%}" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="nav">
+      <div class="main-nav">
+        <a href="/"
+          ><img src="{% static 'img/logo.png'%}" alt="" class="home-img"
+        /></a>
+        <div class="navlist">
+          <a class="nav-button" href="/vacancies">VACANCIES</a>
+          <a class="nav-button" href="/summaries">SUMMARY</a>
+        </div>
+          <div class="navbtns">
+              {% if auth_user %}
+              <button class="user-bar" onclick="document.location.href = '/profile'">
+                <img class="user-icon" src="{{ auth_user.img.url }}" />
+                <p class="name-navbar">{{ auth_user.first_name }} <span>{{ auth_user.last_name }}</span></p>
+              </button>
+              {% else %}
+              <a class="nav-button" href="/login">Log in</a>
+              <div class="palca"></div>
+              <a class="nav-button" href="/signup">Sign in</a>
+              {% endif %}
+          </div>
+      </div>
+    </div>
+
+    {% block container%}
+    {% endblock %}
+
+    <footer id="footer" class="main-footer">
+      <div class="footer_layout">
+        <p>Copyright © 2023 Work for students, Inc.</p>
+        <ul>
+          <li><a href="/">Legal Stuff</a></li>
+          <li><a href="/">Privacy Policy</a></li>
+          <li><a href="/">Manage Cookies</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

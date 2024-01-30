@@ -1,0 +1,163 @@
+{% extends 'echoApp/base.html' %} {% block styles%} {% load static %}
+<link rel="stylesheet" href="{% static 'css/vacancies.css'%}" />
+<link rel="stylesheet" href="{% static 'css/summaries.css'%}" />
+{% endblock %} {% block container%}
+    <form>
+        <input type="text" placeholder="Search here..." class="search">
+      </form>
+    <div class="cont">
+        <div class="filters">
+            <div class="countries">
+              <div class="city" bis_skin_checked="1">
+                <label class="filter-country">Country: </label>
+                  <select id="select-country" style="width: 160px">
+                      <option value="-">-</option>
+                  </select>
+              </div>
+            </div>
+            <div class="region" >
+                <label>Region: </label>
+            </div>
+            <div class="district" >
+                <label>District: </label>
+            </div>
+        
+            <div class="exp_lvl">
+              <label>Experience:</label>
+              <select id="select-experience" >
+                <option value="-">-</option>
+                <option value="Without experience">Without experience</option>
+                <option value="Less than 1 years">Less than 1 years</option>
+                <option value="From 1 yo 3 years">From 1 yo 3 years</option>
+                <option value="More that 3 years">More that 3 years</option>
+              </select>
+            </div>
+        
+            <div class="income">
+              <label for="income">Income level from:</label><br />
+              <input
+                type="range"
+                id="income"
+                name="income"
+                min="200"
+                max="10000"
+                step="100"
+                value="200"
+                class="slider income-slider"
+              />
+              <p>Select: <span id="incomeValue">200</span>
+              <select style="width: 70px" id="select-currency">
+                <option value="USD">USD</option>
+                <option value="BYN">BYN</option>
+                <option value="RUB">RUB</option>
+              </select>
+                </p>
+            </div>
+        
+        
+            <div class="employment">
+              <label>Employment:</label>
+              <select id="select-employment" style="width: 120px">
+                <option value="-">-</option>
+                <option value="Full employment">Full employment</option>
+                <option value="Part-time employment">Part-time employment</option>
+                <option value="One-time job">One-time job</option>
+                <option value="Internship">Internship</option>
+              </select>
+            </div>
+        
+            <div class="sort">
+              <ul>
+                Education:
+                <li>
+                  <input
+                    type="radio"
+                    onMouseDown="this.isChecked=this.checked;"
+                    onClick="this.checked=!this.isChecked;"
+                    name="education"
+                    value="Not required"
+                  />-
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    onMouseDown="this.isChecked=this.checked;"
+                    onClick="this.checked=!this.isChecked;"
+                    name="education"
+                    value="Higher"
+                  />Higher
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    onMouseDown="this.isChecked=this.checked;"
+                    onClick="this.checked=!this.isChecked;"
+                    name="education"
+                    value="Vocational"
+                  />Vocational
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    onMouseDown="this.isChecked=this.checked;"
+                    onClick="this.checked=!this.isChecked;"
+                    name="education"
+                    value="Specialized secondary"
+                  />Specialized secondary
+                </li>
+              </ul>
+            </div>
+        
+            <div class="show">
+              <ul>
+                Show on page:
+                <li>
+                  <input
+                    type="radio"
+                    onMouseDown="this.isChecked=this.checked;"
+                    onClick="this.checked=!this.isChecked;"
+                    name="show-on-page"
+                    value="10"
+                  />10 vacancies
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    onMouseDown="this.isChecked=this.checked;"
+                    onClick="this.checked=!this.isChecked;"
+                    name="show-on-page"
+                    value="20"
+                  />20 vacancies
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    onMouseDown="this.isChecked=this.checked;"
+                    onClick="this.checked=!this.isChecked;"
+                    name="show-on-page"
+                    value="30"
+                  />30 vacancies
+                </li>
+              </ul>
+            </div>
+              <button id="searchBtn">Search</button>
+          </div>
+        <div class="resumies">
+            {% for i in summaries %}
+            <div class="res">
+                <img src="{{ i.user.img.url }}" class="img"/>
+                <p class="title">{{i.title}}</p>
+                <p class="name">{{i.user.first_name}} {{i.user.last_name}}</p>
+                <div class="brd">
+                    <p class="info">Experience: {{ i.experience }}</p>
+                    <p class="info">{{ i.user.country }}, {{ i.user.region }}</p>
+                    <p class="info">Education: {{ i.employment }}</p>
+                </div>
+                <a href="{% url 'summary' i.id %}" style="width: 100%">
+                    <button class="btn" value="">Look</button>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

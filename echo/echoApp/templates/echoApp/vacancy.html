@@ -1,0 +1,38 @@
+{% extends 'echoApp/base.html' %} {% block styles%} {% load static %}
+<link rel="stylesheet" href="{% static 'css/vacancy.css'%}" />
+{% endblock %} {% block container%}
+    <div class="container">
+        <h1>{{ vacancy.title}}</h1>
+        <div class="form">
+            <p class="text">
+                {{ vacancy.experience }}, {{ vacancy.employment }}, {{ vacancy.education }}<br>
+                {{ vacancy.country}}, {{ vacancy.region}}, {{ vacancy.district}}
+            </p>
+            
+            <div class="box1">
+                <p class="info1">{{ vacancy.responses }} человек</p>
+                <p class="pod_info1">уже откликнулись</p>
+            </div>
+
+            <div class="company">
+                <img src="{{ vacancy.company.logo.url }}" class="image">
+                <h4>{{ vacancy.company.title }}</h4>
+                <p class="city">{{ vacancy.country }}, {{ vacancy.region }}</p>
+            </div>
+        </div>
+
+        <p class="about">{{vacancy.description}}
+        </p>
+        {% if auth_user %}
+        <p style="margin-top: 20px">Сопроводительное письмо:</p>
+        <form method="post" >
+            {% csrf_token %}
+            <textarea name="message" class="input-message"></textarea>
+            <input type="submit" class="btn" value="Откликнуться">
+        </form>
+        {% endif %}
+
+    </div>
+{% endblock %}
+
+

@@ -1,0 +1,206 @@
+{% extends 'echoApp/base.html' %} {% block styles%} {% load static %}
+<link rel="stylesheet" href="{% static 'css/vacancies.css'%}" />
+{% endblock %} {% block container%}
+<form>
+    <input type="text" placeholder="Search here..." class="search">
+</form>
+<div class="header">
+
+  <div class="filters">
+    <div class="countries">
+      <div class="city" bis_skin_checked="1">
+        <label class="filter-country">Country: </label>
+          <select id="select-country" style="width: 160px">
+              <option value="-">-</option>
+          </select>
+      </div>
+    </div>
+    <div class="region" >
+        <label>Region: </label>
+    </div>
+    <div class="district" >
+        <label>District: </label>
+    </div>
+
+    <div class="exp_lvl">
+      <label>Experience:</label>
+      <select id="select-experience" >
+        <option value="-">-</option>
+        <option value="Without experience">Without experience</option>
+        <option value="Less than 1 years">Less than 1 years</option>
+        <option value="From 1 yo 3 years">From 1 yo 3 years</option>
+        <option value="More that 3 years">More that 3 years</option>
+      </select>
+    </div>
+
+    <div class="income">
+      <label for="income">Income level from:</label><br />
+      <input
+        type="range"
+        id="income"
+        name="income"
+        min="200"
+        max="10000"
+        step="100"
+        value="200"
+        class="slider income-slider"
+      />
+      <p>Select: <span id="incomeValue">200</span>
+      <select style="width: 70px" id="select-currency">
+        <option value="USD">USD</option>
+        <option value="BYN">BYN</option>
+        <option value="RUB">RUB</option>
+      </select>
+        </p>
+    </div>
+
+
+    <div class="employment">
+      <label>Employment:</label>
+      <select id="select-employment" style="width: 120px">
+        <option value="-">-</option>
+        <option value="Full employment">Full employment</option>
+        <option value="Part-time employment">Part-time employment</option>
+        <option value="One-time job">One-time job</option>
+        <option value="Internship">Internship</option>
+      </select>
+    </div>
+
+    <div class="sort">
+      <ul>
+        Education:
+        <li>
+          <input
+            type="radio"
+            onMouseDown="this.isChecked=this.checked;"
+            onClick="this.checked=!this.isChecked;"
+            name="education"
+            value="Not required"
+          />-
+        </li>
+        <li>
+          <input
+            type="radio"
+            onMouseDown="this.isChecked=this.checked;"
+            onClick="this.checked=!this.isChecked;"
+            name="education"
+            value="Higher"
+          />Higher
+        </li>
+        <li>
+          <input
+            type="radio"
+            onMouseDown="this.isChecked=this.checked;"
+            onClick="this.checked=!this.isChecked;"
+            name="education"
+            value="Vocational"
+          />Vocational
+        </li>
+        <li>
+          <input
+            type="radio"
+            onMouseDown="this.isChecked=this.checked;"
+            onClick="this.checked=!this.isChecked;"
+            name="education"
+            value="Specialized secondary"
+          />Specialized secondary
+        </li>
+      </ul>
+    </div>
+
+    <div class="show">
+      <ul>
+        Show on page:
+        <li>
+          <input
+            type="radio"
+            onMouseDown="this.isChecked=this.checked;"
+            onClick="this.checked=!this.isChecked;"
+            name="show-on-page"
+            value="10"
+          />10 vacancies
+        </li>
+        <li>
+          <input
+            type="radio"
+            onMouseDown="this.isChecked=this.checked;"
+            onClick="this.checked=!this.isChecked;"
+            name="show-on-page"
+            value="20"
+          />20 vacancies
+        </li>
+        <li>
+          <input
+            type="radio"
+            onMouseDown="this.isChecked=this.checked;"
+            onClick="this.checked=!this.isChecked;"
+            name="show-on-page"
+            value="30"
+          />30 vacancies
+        </li>
+      </ul>
+    </div>
+      <button id="searchBtn">Search</button>
+  </div>
+  <div class="content">
+    {% for i in vacancies %}
+    <div class="vacancy">
+      <a href="{% url 'vacancy' i.id%}" class="dev_1" style="color: black; margin: 5px">
+          {{ i.title }}
+      </a>
+
+      <p style="font-size: 15px; margin: 5px; margin-top: 10px">
+        {{ i.country }} {{ i.region }} {{ i.district }}<br />{{ i.company }}<br />{{ i.experience}}
+      </p>
+
+      <p style="font-size: 20px; margin: 5px; margin-top: 10px">
+        {{ i.salary }} {{ i.currency }}
+      </p>
+
+      <p style="font-size: 10px; margin: 5px; margin-top: 10px">
+        {{ i.date_of_create }}
+      </p>
+        {% if auth_user %}
+      <button value="{{i.id}}" class="send-cv">Откликнуться</button>
+        {% endif %}
+    </div>
+      {% endfor %}
+  </div>
+</div>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span
+      class="close"
+      onclick="document.getElementById('myModal').style.display='none'"
+      >&times;</span
+    >
+    <p
+      style="
+        font-size: 30px;
+        font-family: 'Poppins', sans-serif;
+        margin-left: 100px;
+        margin-top: 20px;
+      "
+    >
+      Ваш отклик
+    </p>
+    <p
+      style="
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
+        margin-left: 20px;
+        margin-top: 20px;
+      "
+    >
+      Сопроводительное письмо:
+    </p>
+    <form action="" method="post" id="send-response-form">
+        {% csrf_token %}
+        <textarea name="message" class="input-message-for-vacancy"> </textarea>
+        <button class="send-latter">Откликнуться</button>
+    </form>
+  </div>
+</div>
+
+<script src="{% static 'js/vacancies.js'%}"></script>
+{% endblock %}

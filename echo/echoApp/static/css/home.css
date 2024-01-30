@@ -1,0 +1,797 @@
+* {
+  margin: 0px;
+  padding: 0px;
+    /*animation: rotateAnimation 5s linear infinite;*/
+
+}
+.container,
+.container * {
+  box-sizing: border-box;
+}
+.container {
+  box-sizing: border-box;
+  background-color: #393939;
+  width: 100%;
+  min-height: 2200px;
+}
+
+.comentform {
+  width: 847px;
+  height: 146px;
+  position: static;
+}
+.rectangle-31 {
+  background: #989898;
+  border-radius: 30px 30px 10px 10px;
+  width: 847px;
+  height: 146px;
+  position: absolute;
+  left: 310px;
+  top: 2460px;
+}
+.rectangle-32 {
+  background: #d9d9d9;
+  border-radius: 30px 30px 0px 0px;
+  width: 847px;
+  height: 68px;
+  position: absolute;
+  left: 310px;
+  top: 2460px;
+}
+.ph-user-circle-duotone {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 317px;
+  top: 2464px;
+  overflow: hidden;
+}
+.group {
+  position: absolute;
+  left: 5.62px;
+  top: 5.62px;
+  overflow: visible;
+}
+.type-your-name {
+  color: #989898;
+  text-align: left;
+  font: 500 22px "Inter", sans-serif;
+  position: absolute;
+  left: 392px;
+  top: 2485px;
+}
+.line-6 {
+  border-style: solid;
+  border-color: #989898;
+  border-width: 1px 0 0 0;
+  width: 212px;
+  height: 0px;
+  position: absolute;
+  left: 394px;
+  top: 2517px;
+  transform-origin: 0 0;
+  transform: rotate(0.278deg) scale(1, 1);
+}
+.rectangle-30 {
+  border-style: solid;
+  border-color: #d9d9d9;
+  border-width: 2px;
+  width: 819px;
+  height: 45px;
+  position: absolute;
+  left: 325px;
+  top: 2542px;
+}
+.type-here {
+  color: #d9d9d9;
+  text-align: left;
+  font: 500 22px "Inter", sans-serif;
+  position: absolute;
+  left: 347px;
+  top: 2551px;
+}
+.leave-your-comment-here {
+  color: #ffffff;
+  text-align: left;
+  font: 600 40px "Poppins", sans-serif;
+  position: absolute;
+  left: 310px;
+  top: 2362px;
+}
+.rectangle-28 {
+  background: #989898;
+  border-radius: 0px 0px 10px 10px;
+  width: 847px;
+  height: 127px;
+  position: absolute;
+  left: 310px;
+  top: 2185px;
+}
+.rectangle-302 {
+  border-style: solid;
+  border-color: #d9d9d9;
+  border-width: 2px;
+  width: 819px;
+  height: 90px;
+  position: absolute;
+  left: 325px;
+  top: 2200px;
+}
+.having-found-a-job-on-our-website-you-will-be-able-to-gain-experience-that-is-highly-valued-in-our-world-without-it-you {
+  color: #ffffff;
+  text-align: left;
+  font: 500 22px "Inter", sans-serif;
+  position: absolute;
+  left: 355px;
+  top: 2217px;
+  width: 732px;
+}
+.rectangle-29 {
+  background: #d9d9d9;
+  border-radius: 20px 20px 0px 0px;
+  width: 847px;
+  height: 67px;
+  position: absolute;
+  left: 310px;
+  top: 2118px;
+}
+.screenshot-2023-11-03-at-14-08-1 {
+  border-radius: 30px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 2px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 322px;
+  top: 2128px;
+}
+.hui {
+  color: #000000;
+  text-align: left;
+  font: 500 22px "Inter", sans-serif;
+  position: absolute;
+  left: 387px;
+  top: 2148px;
+}
+.rectangle-282 {
+  background: #989898;
+  border-radius: 0px 0px 10px 10px;
+  width: 847px;
+  height: 173px;
+  position: absolute;
+  left: 310px;
+  top: 1886px;
+}
+.rectangle-303 {
+  border-style: solid;
+  border-color: #d9d9d9;
+  border-width: 2px;
+  width: 819px;
+  height: 141px;
+  position: absolute;
+  left: 325px;
+  top: 1901px;
+}
+.having-found-a-job-on-our-website-you-will-be-able-to-gain-experience-that-is-highly-valued-in-our-world-without-it-you-having-found-a-job-on-our-website-you-will-be-able-to-gain-experience-that-is-highly-valued-in-our-world-without-it-you-can-t-go-anywhere-having-found {
+  color: #ffffff;
+  text-align: left;
+  font: 500 22px "Inter", sans-serif;
+  position: absolute;
+  left: 355px;
+  top: 1918px;
+  width: 732px;
+}
+.rectangle-292 {
+  background: #d9d9d9;
+  border-radius: 20px 20px 0px 0px;
+  width: 847px;
+  height: 67px;
+  position: absolute;
+  left: 310px;
+  top: 1819px;
+}
+.super-sus {
+  color: #000000;
+  text-align: left;
+  font: 500 22px "Inter", sans-serif;
+  position: absolute;
+  left: 387px;
+  top: 1849px;
+}
+.screenshot-2023-11-03-at-14-09-1 {
+  border-radius: 30px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 2px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 322px;
+  top: 1829px;
+}
+.feedback {
+  color: #ffffff;
+  text-align: left;
+  font: 600 40px "Poppins", sans-serif;
+  position: absolute;
+  left: 310px;
+  top: 1720px;
+  width: 271px;
+  height: 73px;
+}
+.contacts {
+  width: 1220px;
+  height: 234px;
+  position: static;
+}
+.rectangle-272 {
+  background: #696969;
+  border-radius: 60px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 4px;
+  width: 1220px;
+  height: 234px;
+  position: absolute;
+  left: 107px;
+  top: 1389px;
+}
+.ellipse-4 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 645px;
+  top: 1427px;
+  box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.25);
+}
+.ellipse-6 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 1007px;
+  top: 1427px;
+  box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.25);
+}
+.ellipse-5 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 255px;
+  top: 1427px;
+  box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.25);
+}
+.vk-1 {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: 1037px;
+  top: 1457px;
+}
+.tg-1 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 670px;
+  top: 1452px;
+}
+.group2 {
+  position: absolute;
+  left: 285px;
+  top: 1457px;
+  overflow: visible;
+}
+.main {
+  width: 1220px;
+  height: 1231px;
+  position: static;
+}
+.rectangle-23 {
+  background: #696969;
+  border-radius: 60px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 4px;
+  width: 1220px;
+  height: 1231px;
+  position: absolute;
+  left: 107px;
+  top: 118px;
+}
+.why-us {
+  width: 965px;
+  height: 379px;
+  position: static;
+}
+.place-1 {
+  width: 248px;
+  height: 116px;
+  position: static;
+}
+.more-than-210-000-vacancies {
+  color: #ffffff;
+  text-align: left;
+  font: 600 22px "Poppins", sans-serif;
+  position: absolute;
+  left: 253px;
+  top: 1155px;
+  width: 214px;
+  height: 103px;
+}
+.rectangle-22 {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 2px;
+  width: 248px;
+  height: 90px;
+  position: absolute;
+  left: 238px;
+  top: 1142px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.25);
+}
+.place-2 {
+  width: 248px;
+  height: 116px;
+  position: static;
+}
+.more-than-540-000-resumes {
+  color: #ffffff;
+  text-align: left;
+  font: 600 22px "Poppins", sans-serif;
+  position: absolute;
+  left: 611px;
+  top: 1155px;
+  width: 214px;
+  height: 103px;
+}
+.rectangle-222 {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 2px;
+  width: 248px;
+  height: 90px;
+  position: absolute;
+  left: 596px;
+  top: 1142px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.25);
+}
+.place-3 {
+  width: 248px;
+  height: 116px;
+  position: static;
+}
+.rectangle-223 {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 2px;
+  width: 248px;
+  height: 90px;
+  position: absolute;
+  left: 955px;
+  top: 1142px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.25);
+}
+.about-1000-new-users-every-day {
+  color: #ffffff;
+  text-align: left;
+  font: 600 22px "Poppins", sans-serif;
+  position: absolute;
+  left: 970px;
+  top: 1155px;
+  width: 214px;
+  height: 103px;
+}
+.place-4 {
+  width: 248px;
+  height: 116px;
+  position: static;
+}
+.rectangle-224 {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 2px;
+  width: 248px;
+  height: 90px;
+  position: absolute;
+  left: 425px;
+  top: 995px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.25);
+}
+.job-search-for-students {
+  color: #ffffff;
+  text-align: left;
+  font: 600 22px "Poppins", sans-serif;
+  position: absolute;
+  left: 440px;
+  top: 1008px;
+  width: 214px;
+  height: 103px;
+}
+.place-5 {
+  width: 248px;
+  height: 116px;
+  position: static;
+}
+.rectangle-21 {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 2px;
+  width: 248px;
+  height: 90px;
+  position: absolute;
+  left: 760px;
+  top: 995px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.25);
+}
+.more-than-2000-company {
+  color: #ffffff;
+  text-align: left;
+  font: 600 22px "Poppins", sans-serif;
+  position: absolute;
+  left: 775px;
+  top: 1008px;
+  width: 214px;
+  height: 103px;
+}
+.why-us2 {
+  color: #ffffff;
+  text-align: left;
+  font: 600 50px "Poppins", sans-serif;
+  position: absolute;
+  left: 607px;
+  top: 879px;
+}
+.vs-code {
+  width: 265px;
+  height: 600px;
+  position: static;
+}
+.rectangle-26 {
+  border-radius: 30px;
+  border-style: solid;
+  border-color: #ebebeb;
+  border-width: 2px;
+  width: 265px;
+  height: 326px;
+  position: absolute;
+  left: 943px;
+  top: 508px;
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25);
+}
+.having-found-a-job-on-our-website-you-will-be-able-to-gain-experience-that-is-highly-valued-in-our-world-without-it-you-can-t-go-anywhere {
+  color: #ffffff;
+  text-align: left;
+  font: 600 22px "Poppins", sans-serif;
+  position: absolute;
+  left: 966px;
+  top: 525px;
+  width: 220px;
+  height: 292px;
+}
+.ellipse-2 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 1002px;
+  top: 234px;
+  box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.25);
+}
+.vscode-icons-file-type-vscode {
+      animation: rotateAnimation 5s linear infinite;
+
+  position: absolute;
+  left: 1027px;
+  top: 259px;
+  overflow: visible;
+}
+.experience {
+  color: #ffffff;
+  text-align: left;
+  font: 500 40px "Poppins", sans-serif;
+  position: absolute;
+  left: 968px;
+  top: 410px;
+}
+.book {
+  width: 358px;
+  position: static;
+}
+.rectangle-25 {
+  border-radius: 30px;
+  border-style: solid;
+  border-color: #ebebeb;
+  border-width: 2px;
+  width: 265px;
+  height: 326px;
+  position: absolute;
+  left: 587px;
+  top: 508px;
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25);
+}
+.on-our-website-you-can-find-a-job-you-like-where-you-can-develop-yourself-and-gain-new-knowledge {
+  color: #ffffff;
+  text-align: left;
+  font: 600 22px "Poppins", sans-serif;
+  position: absolute;
+  left: 613px;
+  top: 525px;
+  width: 220px;
+  height: 292px;
+}
+.ellipse-1 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 645px;
+  top: 234px;
+  box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.25);
+}
+.streamline-emojis-green-book {
+      animation: rotateAnimation 5s linear infinite;
+
+  position: absolute;
+  left: 667px;
+  top: 259px;
+  overflow: visible;
+}
+.self-improvement {
+  color: #ffffff;
+  text-align: left;
+  font: 500 40px "Poppins", sans-serif;
+  position: absolute;
+  left: 538px;
+  top: 410px;
+}
+.money {
+  width: 265px;
+  height: 600px;
+  position: static;
+}
+.rectangle-24 {
+  border-radius: 30px;
+  border-style: solid;
+  border-color: #ebebeb;
+  border-width: 2px;
+  width: 265px;
+  height: 326px;
+  position: absolute;
+  left: 231px;
+  top: 508px;
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25);
+}
+.on-our-website-we-can-choose-a-vacancy-for-you-and-earn-a-lot-of-money-from-it-which-can-develop-and-promote-you-in-life {
+  color: #ffffff;
+  text-align: left;
+  font: 600 22px "Poppins", sans-serif;
+  position: absolute;
+  left: 254px;
+  top: 525px;
+  width: 220px;
+  height: 292px;
+}
+.ellipse-3 {
+  background: #d9d9d9;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 288px;
+  top: 234px;
+  box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.25);
+}
+.noto-money-bag {
+    animation: rotateAnimation 5s linear infinite;
+  position: absolute;
+  left: 313px;
+  top: 259px;
+  overflow: visible;
+}
+.money2 {
+  color: #ffffff;
+  text-align: left;
+  font: 500 40px "Poppins", sans-serif;
+  position: absolute;
+  left: 298px;
+  top: 410px;
+}
+
+.feedback_p {
+  margin-top: 57px;
+  margin-left: 203px;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+}
+
+.comments {
+  margin-top: 40px;
+  margin-left: 203px;
+  margin-right: 170px;
+}
+
+.comment {
+  margin-bottom: 60px;
+}
+
+.upper {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: #d9d9d9;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.comment-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  margin-left: 12px;
+  border: solid;
+  border-width: 2px;
+}
+
+.comment-name {
+  font-size: 22px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.footer-comment {
+  background-color: #989898;
+  padding: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.border-for-comment {
+  border: solid;
+  border-color: #ffffff;
+  border-width: 3px;
+  padding: 20px;
+}
+
+.text-comment {
+  font-size: 22px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  max-width: 732px;
+}
+.leave-comment {
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+  width: 563px;
+  height: 60px;
+  padding-bottom: 80px;
+}
+
+.none-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-left: 12px;
+}
+
+.rectangle-27 {
+  background: #696969;
+  border-radius: 60px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 4px;
+  width: 1220px;
+  position: absolute;
+  left: 107px;
+  top: 1663px;
+  padding-bottom: 80px;
+}
+
+.input-name-for-comment {
+  height: 30px;
+  margin-top: 20px;
+  border: none;
+  background: none;
+  margin-left: 20px;
+  width: 270px;
+  font-size: 22px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+}
+
+.input-name-for-comment:focus {
+  outline: none;
+}
+
+#input-text-for-comment {
+  height: 51px;
+  resize: none;
+  width: 732px;
+  border: none;
+  background: none;
+  font-size: 22px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+}
+
+#input-text-for-comment:focus {
+  outline: none;
+}
+
+.message-logo {
+  animation: rotateAnimation 5s linear infinite;
+  transition: ease all 0.4s;
+  -webkit-filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.50));
+}
+
+    @keyframes rotateAnimation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+.message-logo:hover {
+  width:  100px;
+  height: 100px;
+}
+
+.tg-1:hover {
+  left: 665px;
+  top: 1447px;
+    width:  110px;
+  height: 110px;
+}
+
+.vk-1:hover {
+  left: 1032px;
+  top: 1452px;
+}
+
+.group2:hover {
+  left: 280px;
+  top: 1452px;
+}
+
+.send-comment-btn {
+  margin-left: 700px;
+  width: 60px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  color: #696969;
+  font-size: 20px;
+  background-color: #ffffff;
+  margin-top: 20px;
+}
+
+.send-comment-btn:focus {
+  background-color: #696969;
+  color: #ffffff;
+}

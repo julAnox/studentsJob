@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    background-color: #37373739;
+}
+.metro, .podrabotka {
+  display: none;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+
+.filters > div {
+  width: 250px;
+  padding: 20px;
+  background-color: #e3e0e0;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.326);
+  border-radius: 7px;
+  margin-top: 10px;
+}
+
+.filters ul li,
+.select-experience label,
+.city li,
+.podrabotka li {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.filters ul li input[type="checkbox"],
+.select-experience input[type="range"],
+.city li input[type="checkbox"],
+.podrabotka li input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.slider,
+.income-slider {
+  width: 100%;
+  height: 2px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.select-experience p,
+.income p {
+  margin-top: 10px;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.sort ul li,
+.output ul li,
+.show ul li {
+  margin-bottom: 10px;
+  color: #000000;
+  margin-top: 10px;
+}
+
+.sort ul li input[type="radio"],
+.output ul li input[type="radio"],
+.show ul li input[type="radio"] {
+  margin-right: 10px;
+  cursor: pointer;
+  color: #000000;
+  margin-top: 10px;
+}
+
+input[type="range"] {
+  border: none;
+  background-color: rgba(134, 125, 125, 0.418);
+  border-radius: 5px;
+  padding: 5px 0 5px 0;
+  margin-top: 10px;
+}
+
+.metro > select:focus,
+.employment > select:focus,
+.schedule > select:focus {
+  outline: none;
+}
+.content {
+  margin-top: 106px;
+}
+
+.vacancy {
+  background-color: #e3e0e0;
+  margin: 4px 0px 50px 100px;
+  width: 900px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.326);
+  padding: 20px;
+  border-radius: 10px;
+}
+.dev_1 {
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+}
+
+.send-cv {
+  background-color: rgb(115, 224, 115);
+  border: none;
+  width: 150px;
+  height: 25px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 140px;
+  margin-top: 13px;
+}
+
+.send-cv:hover {
+  background-color: rgb(107, 210, 107);
+}
+
+.send-cv:active {
+  background-color: rgb(82, 185, 82);
+}
+
+.send-cv-form {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  align-items: center;
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 400px;
+  padding-bottom: 50px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.input-message-for-vacancy {
+  margin-top: 10px;
+  height: 240px;
+  width: 350px;
+  margin-left: 20px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  resize: none;
+}
+
+.input-message-for-vacancy {
+  outline: none;
+}
+
+.send-latter {
+  background-color: rgb(115, 224, 115);
+  border: none;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+  margin-top: 40px;
+}
+
+.send-latter:hover {
+  background-color: rgb(107, 210, 107);
+}
+
+.send-latter:active {
+  background-color: rgb(82, 185, 82);
+}
+
+.city {
+  box-shadow: none;
+  margin-top: 10px;
+}
+
+.region-selector {
+  display: none;
+}
+
+.region {
+  display: none;
+}
+.district {
+  display: none;
+}
+
+select {
+    float: right;
+  border: none;
+  background-color: rgba(134, 125, 125, 0.418);
+  border-radius: 5px;
+  padding: 5px;
+  width: 140px;
+}
+select:focus {
+  outline: none;
+}
+
+#searchBtn {
+  background-color: #e3e0e0;
+  font-size: 17px;
+  margin-top: 30px;
+  width: 100px;
+  height: 40px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+
+#searchBtn:hover {
+  background-color: #cccccc;
+}
+
+#searchBtn:active {
+  background-color: #aaaaaa;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.search{
+    width: 620px;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+    border: none;
+    background-color: #f7f7f7;
+    box-shadow: inset 4PX 4PX 6PX rgb(0, 0, 0, 0.326);
+    padding: 8px;
+}
+
+.search:focus{
+    outline: none;
+}

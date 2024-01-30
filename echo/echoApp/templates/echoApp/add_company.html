@@ -1,0 +1,44 @@
+{% extends 'echoApp/base.html' %} {% block styles%} {% load static %}
+<link rel="stylesheet" href="{% static 'css/my_company.css'%}" />
+{% endblock %} {% block container%}
+<div class="content">
+        <div class="container">
+        <form name="add_company" action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <img src="{% static 'img/none-logo.png' %}" id="preview">
+            <input
+                type="file"
+                id="profile-pic"
+                name="logo"
+                accept="image/*"
+                onchange="loadImage(event)"
+                value="{% static 'img/none-logo.png' %}"
+                />
+            <p class="title_country">
+                <label for="Title">Title: </label>
+                <input name="title" type="text" placeholder="" value="{{company.title}}"><br>
+
+                <div class="place">
+                    <label class="place-city">Country: </label>
+                    <select name="country">
+                        <option>-</option>
+                        {% for i in country %}
+                            {% if company.country == i %}
+                                <option selected>{{i}}</option>
+                            {% else %}
+                                <option>{{i}}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+            </p>
+
+            <div class="box">
+                <textarea name="description" cols="30" rows="3" placeholder="Type here" class="textarea">{{ company.description }}</textarea>
+            </div>
+            <input type="submit" class="btn1" value="Add Company">
+        </form>
+        </div>
+</div>
+<script src="{% static 'js/my_company.js'%}"></script>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'echoApp/base.html' %}
+
+{% block styles%}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/login.css'%}" />
+{% endblock %}
+
+{% block container%}
+    <div class=" flex-r container">
+        <div class="flex-r login-wrapper">
+            <div class="login-text">
+                
+                <h1>Log In</h1>
+                <p> Welcome!<br>
+                    We are glad that you chose us!
+                    Log In here...
+                </p>
+                <p class="form-error" style="color: red; width: 360px; font-size: 13px">{{ error }}</p>
+                <form class="flex-c" method="POST" >
+                    {% csrf_token %}
+                    <div class="input-box">
+                        <span class="label">E-mail</span>
+                        <div class=" flex-r input">
+                            <input type="text" placeholder="name@abc.com" name="email">
+                            <i class="fas fa-at"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="input-box">
+                        <span class="label">Password</span>
+                        <div class="flex-r input">
+                            <input type="password" placeholder="enter your password" name="password">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+
+                  
+                    <input class="btn" type="submit" value="Log In">
+                    <span class="extra-line">
+                        <span>Don't have an account?</span>
+                        <a href="/signup">Sign In</a>
+                    </span>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
